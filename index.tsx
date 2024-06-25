@@ -306,10 +306,6 @@ const Slider: React.FC<SliderProps> = ({
 
   return (
     <View {...restProps}>
-      <View {...labelContainerProps}>
-        {labelView}
-        {notchView}
-      </View>
       <View onLayout={handleContainerLayout} style={styles.controlsContainer}>
         <View style={railContainerStyles}>
           {renderRail()}
@@ -328,6 +324,10 @@ const Slider: React.FC<SliderProps> = ({
           style={styles.touchableArea}
           collapsable={false}
         />
+      </View>
+      <View {...labelContainerProps}>
+        {labelView}
+        {notchView}
       </View>
     </View>
   );
